@@ -1,0 +1,45 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+#plone-global-topbar-iframe {
+    width: 100%;
+    background-color: black; 
+    height: 100px;  
+}
+
+#logo {
+    background: url('https://plone.org/logo@2x.png');
+    width: 20%;
+    float: left;
+}
+
+#searchbox {
+    width: 15%;
+    float: left;
+}
+
+#mainlinks {
+    width: 40%;
+    float: left;
+}
+
+#sites {
+    width: 15%;
+    float: left;
+}
+
+
+#mainlinks  span {
+    display: block;
+    position: absolute; 
+    top: 150px; l
+    left: 0; 
+    width: 125px;
+    padding: 5px;
+     margin: 10px; 
+     z-index: 100;
+    color: #AAA; background: white;text-align: center;
+}
+
