@@ -1,0 +1,108 @@
+<html>
+    <head>
+        <script>
+            $('#sites-select').click(function(){
+                location.url = $(this).val;
+            });
+        </script>
+        <style>
+            #plone-global-topbar-wrapper {
+                width: 100%; 
+                background-color: #333; 
+                margin: 0; 
+                padding: 0; 
+                display: inline-block;
+            }
+            #plone-global-topbar-mainlinks {
+                float: left; 
+                width: 40%; 
+                margin-top: 20px;
+            }
+            #plone-global-topbar-mainlinks a {
+                font-size: 10pt; 
+                padding: 10px; 
+                font-family: Arial; 
+                text-decoration: none; 
+                color: #ddd;
+            }
+            #plone-global-topbar-mainlinks a:hover {
+                color: #eef;
+            }
+            #plone-global-topbar-logo {
+                float: left; 
+                width: 15%;
+            }
+            #plone-global-topbar-searchbox {
+                float: left; 
+                width: 25%;
+            }
+            #plone-global-topbar-sites {
+                float: left; 
+                width: 10%;
+            }
+        </style>
+    </head>
+
+<body>
+    
+    <div id='plone-global-topbar-wrapper'>
+        <div id='plone-global-topbar-iframe'>
+            // Logo
+            <div id='plone-global-topbar-logo'>
+                <img alt='Plone' src='http://plone.org/logo.png'/>
+            </div>
+            // Search box
+            <div id='plone-global-topbar-searchbox'>
+                <script> \
+                  (function() { \
+                    var cx = '000972445131351556642:syx6s4pgdp8'; \
+                    var gcse = document.createElement('script'); \
+                    gcse.type = 'text/javascript'; \
+                    gcse.async = true; \
+                    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +\
+                        '//www.google.com/cse/cse.js?cx=' + cx; \
+                    var s = document.getElementsByTagName('script')[0];\
+                    s.parentNode.insertBefore(gcse, s); \
+                  })(); \
+                </script> \
+                <gcse:search></gcse:search>
+            </div>
+
+            // Main links
+            <ul id='plone-global-topbar-mainlinks'>
+                // Planet
+                <li>
+                    <a href='http://planet.plone.org' title='Plone Planet'>PLANET</a>
+                </li>
+                // Developers
+                <li>
+                    <a href='http://developers.plone.org' title='Plone Developers'>DEVELOPERS</a>
+                </li>
+                // Network
+                <li>
+                    <a href='http://plone.com' title='Plone Com'>NETWORK</a>
+                </li>
+                // Contribute to Plone
+                <li>
+                    <a href='http://plone.org' title='Plone Org'>CONTRIBUTE TO PLONE</a>
+                </li>
+                // Community
+                <li>
+                    <a href='http://plone.org' title='Plone Org'>COMMUNITY</a>
+                </li>
+            </ul>
+            // Sites
+            <div id='plone-global-topbar-sites'>
+                <select id='sites-select'>
+
+            <option value='http://plone.es'>Español</option>
+            <option value='http://plone.it'>Italian</option>
+            <option value='http://plone.ro'>Romania</option>
+
+                </select>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

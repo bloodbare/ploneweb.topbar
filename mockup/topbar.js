@@ -1,3 +1,4 @@
+/*jshint multistr: true */
 
 // We need to get the information from the json
 
@@ -8,9 +9,9 @@
 
 
 (function ($, window, document, undefined) {
+"use strict";
 
-
-out = "<script>";
+var out = "<script>";
 out += "$('#sites-select').click(function(){";
 out += "location.url=$(this).val;";
 out += "})</script>";
@@ -45,7 +46,7 @@ out +=" <script> \
     s.parentNode.insertBefore(gcse, s); \
   })(); \
 </script> \
-<gcse:search></gcse:search>"
+<gcse:search></gcse:search>";
 out += "</div>";
 
 //<form id='global-topbar-search' action='http://google.com'><input type='text' name='inputsearch'/></form></div>";
