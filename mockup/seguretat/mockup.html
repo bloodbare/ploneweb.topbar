@@ -3,6 +3,12 @@
         <link href="fonts/stylesheet.css" rel="stylesheet">
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 
+        <script>
+
+            $('#sites-select').click(function(){
+                location.url = $(this).val;
+            });
+        </script>
         <style>
             #plone-global-topbar-wrapper {
                 width: 100%; 
@@ -13,19 +19,15 @@
                 display: inline-block;
             }
             #plone-global-topbar-iframe{
-                padding: 5px 20px 5px 20px;
+                padding: 5px;
                 height:25px;
-            }
-
-            .mostrar_mobile {
-                display: block !important;
             }
 
             /* Main links */ 
 
             #plone-global-topbar-mainlinks {
                 float: right; 
-                width: 55%; 
+                width: 50%; 
                 margin-top: 0px;
                 
             }
@@ -34,7 +36,6 @@
                 float: right; 
                 margin: 0px;
                 padding-right:20px;
-                border-right:1px solid #666;
                 
             }
             #plone-global-topbar-mainlinks li {
@@ -101,11 +102,11 @@
                 padding-left: 10px;
                 margin-bottom: 5px;
             }
-            .columnna-caixa-desplegada ul {         
+            .columnna-caixa-desplegada ul {
+                
                 border-radius: 0 0 0 0;
                 padding: 0 !important;
                 display: inline-block !important;
-                border-right:none!important;
 
             }
             .columnna-caixa-desplegada ul li {
@@ -134,7 +135,11 @@
                 float: left; 
                 width: 15%;
             }
-
+             #plone-global-topbar-sites { 
+                float: left; 
+                width: 15%;
+                border-left: 1px solid #575757;
+            }
 
            
 
@@ -146,10 +151,7 @@
             #plone-global-topbar-sites{
                 float: right; 
                 margin-bottom: 2px;
-                width: 15%;
             }
-
-
             #sites-select{
                 padding-left: 30px;
             }
@@ -188,12 +190,12 @@
             #sites-select ul li a {
                 background: url("img/arrow.png") no-repeat scroll 10px 6px;
                 background-position:65px 8px;
-                color: #999;
-                font-family: 'dinregular';
+                color: #666;
+                font-family: 'dinbold';
                 font-weight:normal;
                 font-size:0.8em;
                 display: block;
-                padding: 3px 20px;
+                padding: 4px 20px;
                 text-decoration: none;
             }
             #sites-select ul li a:hover {
@@ -285,39 +287,8 @@
             .gsst_a .gscb_a {
                 color: #ccc!important;
             }
-            #display_mobile {
-                display: none;
-            }
 
-            @media only screen and (max-width:700px) {
-                #plone-global-topbar-mainlinks {
-                    width: 100%;
-                    float: left;
-                    display: none;
 
-                }
-                #display_mobile {
-                    display: block;
-                }
-                #plone-global-topbar-mainlinks li {
-                    width: 100%;
-                    float: left;
-                }
-                #plone-global-topbar-mainlinks ul {
-                    width: 100%;
-                    float: left;
-                    padding-left: 0;
-                }
-                .caixa-desplegada {
-                    width: 200px;
-                }
-                .caixa-desplegada h2 {
-                    display: none;
-                }
-                .caixa-desplegada {
-                    left: 200px;
-                }
-            }
 
         </style>
     </head>
@@ -329,7 +300,6 @@
              <!-- Logo -->
             <div id='plone-global-topbar-logo'>
                 <img alt='Plone' src='img/logo_plone.png'/>
-                <a href="#" id="display_mobile">display</a>
             </div>
 
 
@@ -435,17 +405,5 @@
 
         </div>
     </div>
-
-        <script>
-
-            $('#sites-select').click(function(){
-                location.url = $(this).val;
-            });
-
-            $('#display_mobile').click(function(){
-                $('#plone-global-topbar-mainlinks').toggleClass('mostrar_mobile');
-            });
-        </script>
-
 </body>
 </html>
