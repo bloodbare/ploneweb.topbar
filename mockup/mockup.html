@@ -329,14 +329,37 @@
             }
 
             @media only screen and (max-width:700px) {
+
+                #plone-global-topbar-logo {
+                    width: 100%;
+                }
+                #plone-global-topbar-logo a {
+                    padding: 5px 10px 5px 10px;
+                    background-color: #444!important;
+                    border-radius: 5px 5px 5px 5px;
+                    background: none repeat scroll 0 0 #444444;
+                    border: 1px solid #575757;
+                    color: #999999;
+                    font-family: 'dinbold';
+                    font-size: 0.7em;
+                    text-decoration: none;
+                }
+                #plone-global-topbar-sites {
+                    display: none;
+                }
+
+                #plone-global-topbar-searchbox {
+                    display: none;
+                }
+
                 #plone-global-topbar-mainlinks {
                     width: 100%;
                     float: left;
                     display: none;
-
                 }
                 #display_mobile {
                     display: block;
+                    float: right;
                 }
                 #plone-global-topbar-mainlinks li {
                     width: 100%;
@@ -356,6 +379,7 @@
                 .caixa-desplegada {
                     left: 200px;
                 }
+
             }
 
         </style>
@@ -368,7 +392,7 @@
              <!-- Logo -->
             <div id='plone-global-topbar-logo'>
                 <img alt='Plone' src='img/logo_plone.png'/>
-                <a href="#" id="display_mobile">display</a>
+                <a href="#" id="display_mobile">MENU</a>
             </div>
 
 
