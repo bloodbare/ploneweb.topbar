@@ -32,7 +32,7 @@
 
             #plone-global-topbar-mainlinks {
                 float: right; 
-                width: 55%; 
+                width: 60%; 
                 margin-top: 0px;
                 
             }
@@ -41,7 +41,6 @@
                 float: right; 
                 margin: 0px;
                 padding-right:20px;
-                border-right:1px solid #666;
                 
             }
             #plone-global-topbar-mainlinks li {
@@ -145,7 +144,15 @@
                 font-size: 0.8em !important;
             }
             .columnna-caixa-desplegada ul li a:hover {
-                 background: -moz-linear-gradient(top,  #3d3d3d 0%, #323232 100%); /* FF3.6+ */
+                background: #3d3d3d; /* Old browsers */
+                background: -moz-linear-gradient(top,  #3d3d3d 0%, #323232 100%); /* FF3.6+ */
+                background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#3d3d3d), color-stop(100%,#323232)); /* Chrome,Safari4+ */
+                background: -webkit-linear-gradient(top,  #3d3d3d 0%,#323232 100%); /* Chrome10+,Safari5.1+ */
+                background: -o-linear-gradient(top,  #3d3d3d 0%,#323232 100%); /* Opera 11.10+ */
+                background: -ms-linear-gradient(top,  #3d3d3d 0%,#323232 100%); /* IE10+ */
+                background: linear-gradient(to bottom,  #3d3d3d 0%,#323232 100%); /* W3C */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3d3d3d', endColorstr='#323232',GradientType=0 ); /* IE6-9 */
+
             }
 
 
@@ -155,7 +162,12 @@
             /* Logo */ 
             #plone-global-topbar-logo {
                 float: left; 
-                width: 15%;
+                width: 10%;
+            }
+
+            #plone-global-topbar-logo img{
+                margin-top: 2px;
+                height:20px;
             }
 
 
@@ -188,7 +200,7 @@
                 box-shadow: 0 0 9px rgba(0, 0, 0, 0.15);
                 display: inline-table;
                 list-style: none outside none;
-                padding: 0 20px;
+                padding: 0 10px;
                 border:1px solid #575757;
                 position: relative;
                 margin: 0px 0px 0px 0px;
@@ -233,11 +245,11 @@
                 background: linear-gradient(to bottom,  #3d3d3d 0%,#444444 100%); /* W3C */
                 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3d3d3d', endColorstr='#444444',GradientType=0 ); /* IE6-9 */
 
-                border-radius: 0px 5px 5px 5px;
+                border-radius: 5px 0px 5px 5px;
                 padding: 30 !important;
                 position: absolute;
-                left:0px;
-                top: 20px;
+                left:-77px;
+                top: 18px;
                 border:none !important;
             }
             #sites-select ul ul li {
@@ -271,7 +283,7 @@
             }
             #plone-global-topbar-searchbox {
                 float: right; 
-                width: 15%;
+                width: 15%;#plone-global-topbar-mainlinks ul
             }
 
    
@@ -301,8 +313,8 @@
                 margin-bottom: 0px!important;
             }
             input.gsc-search-button, input.gsc-search-button:hover, input.gsc-search-button:focus {
-                background-color: #444!important;
-                border-color: #666!important;
+                background-color: #666!important;
+                border-color: #888!important;
             }
             input.gsc-input {
                 border: no!important;
@@ -328,7 +340,7 @@
                 display: none;
             }
 
-            @media only screen and (max-width:700px) {
+            @media only screen and (max-width:980px) {
 
                 #plone-global-topbar-iframe {
                     height: 40px;
@@ -338,8 +350,14 @@
                 #plone-global-topbar-logo {
                     width: 100%;
                 }
+                #plone-global-topbar-logo img{
+                    padding-top: 4px;
+                    height:30px;
+                    margin-top: 0px;
+                }
                 #plone-global-topbar-logo a {
-                    padding: 5px 30px 5px 30px;
+                    padding: 6px 30px 6px 30px;
+                    margin-top: 4px;
                     background-color: #444!important;
                     border-radius: 5px 5px 5px 5px;
                     border: 1px solid #575757;
@@ -371,22 +389,53 @@
                 }
                 #plone-global-topbar-mainlinks li {
                     width: 100%;
+                    display: inline-block;
                     float: left;
+                    position: relative;
                 }
                 #plone-global-topbar-mainlinks ul {
+                    border-right: none;
+                    margin-top: 20px;
+                    margin-bottom: 20px;
                     width: 100%;
                     float: left;
                     padding-left: 0;
                 }
                 .caixa-desplegada {
-                    width: 200px;
+                    background: none;
+                    float: left;
+                    width: 90%;
+                    padding: 0px;
+                    padding-left: 20px;
+                    padding-bottom: 20px;
                 }
                 .caixa-desplegada h2 {
                     display: none;
                 }
-                .caixa-desplegada {
-                    left: 200px;
+                .caixa-desplegada hr {
+                    display: none;
                 }
+                .columnna-caixa-desplegada{
+                    padding: 15px 0px 0px 0px !important;
+                    border-bottom: 1px solid #575757;
+                    width:100%;
+                }
+                .columnna-caixa-desplegada h5 {
+                    margin-top:0px;
+                }
+                .columnna-caixa-desplegada ul {
+                    margin-top:0px !important;
+                }
+                .columnna-caixa-desplegada ul li a {
+                    padding: 5px 40px 5px 10px !important;
+                }
+
+                #links-select li:hover > .caixa-desplegada {
+                display: inline-block;
+                position: relative;
+                /*top: 100%;*/
+            }
+
 
             }
 
@@ -399,14 +448,27 @@
         <div id='plone-global-topbar-iframe'>
              <!-- Logo -->
             <div id='plone-global-topbar-logo'>
-                <img alt='Plone' src='img/logo_plone.png'/>
+                <img alt='Plone' src='img/logo_plone_30.png'/>
                 <a href="#" id="display_mobile">MENU</a>
             </div>
 
 
 
 
-
+            <!-- Sites -->
+            <div id='plone-global-topbar-sites'>
+                <div id='sites-select'>
+                    <ul>
+                        <li><a href="#">Paisos</a>
+                            <ul>
+                                <li><a href="#">Catalunya</a></li>
+                                <li><a href="#">Pais Basc</a></li>
+                                <li><a href="#">Galicia</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
 
 
             <!-- Search box -->
@@ -431,20 +493,7 @@
 
 
 
-            <!-- Sites -->
-            <div id='plone-global-topbar-sites'>
-                <div id='sites-select'>
-                    <ul>
-                        <li><a href="#">Paisos</a>
-                            <ul>
-                                <li><a href="#">Catalunya</a></li>
-                                <li><a href="#">Pais Basc</a></li>
-                                <li><a href="#">Galicia</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+
 
 
             <div id='plone-global-topbar-mainlinks'>
