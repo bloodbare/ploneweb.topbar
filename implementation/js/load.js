@@ -1,17 +1,17 @@
 (function(){
   var target = jQuery('#topbarcontainer');
   var baseURL = 'http://static.david.edw.ro/ploneweb.topbar/implementation';
-  function loadWidgetHTML() {
+  function loadWidgetHTML(callback) {
     jQuery.ajax({
       url: baseURL + "/js/index.js",
       jsonpCallback: "populateWidget",
       jsonp: false,
       dataType: "jsonp",
       success: function(data){
-        console.log(data);
         var dataHTML = data.join('\n');
         var html = dataHTML.replace(/\{\{ BASE_URL \}\}/g, baseURL);
         target.html(html);
+        return callback();
       }
     });
   }
@@ -38,9 +38,20 @@
       s.parentNode.insertBefore(gcse, s);
     })();
   }
+  function loadMobileJS(){
+    jQuery('#sites-select', target).click(function(){
+      location.url = jQuery(this).val;
+    });
+
+    jQuery('#display_mobile', target).click(function(evt){
+      jQuery('#plone-global-topbar-mainlinks', target).toggleClass('mostrar_mobile');
+    });
+  }
   jQuery(document).ready(function(){
-    loadWidgetHTML();
-    loadWidgetCSS();
-    loadSearchBox();
+    loadWidgetHTML(function(){
+      loadWidgetCSS();
+      loadSearchBox();
+      loadMobileJS();
+    });
   });
 })();
