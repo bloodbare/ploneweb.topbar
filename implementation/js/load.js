@@ -16,7 +16,7 @@
     });
   }
   function loadWidgetCSS() {
-    var cssPaths = ['/fonts/stylesheet.css', '/css/topbar.css'];
+    var cssPaths = ['/css/reset.css', '/fonts/stylesheet.css', '/css/topbar.css'];
     jQuery.each(cssPaths, function(i, cssPath){
       var cssLink = jQuery('<link>', {
         rel: 'stylesheet',
