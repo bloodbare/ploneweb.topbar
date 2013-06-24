@@ -26,9 +26,21 @@
       cssLink.appendTo('head');
     });
   }
+  function loadSearchBox(){
+    (function() {
+      var cx = '000972445131351556642:syx6s4pgdp8';
+      var gcse = document.createElement('script');
+      gcse.type = 'text/javascript';
+      gcse.async = true;
+      gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+      '//www.google.com/cse/cse.js?cx=' + cx;
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(gcse, s);
+    })();
+  }
   jQuery(document).ready(function(){
-    console.log('READY!');
-    loadWidgetHTML(target);
-    loadWidgetCSS(target);
+    loadWidgetHTML();
+    loadWidgetCSS();
+    loadSearchBox();
   });
 })();

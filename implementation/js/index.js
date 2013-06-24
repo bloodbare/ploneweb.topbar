@@ -27,7 +27,9 @@ var html = [
 
 
         '<!-- Search box -->',
-        '<div id="plone-global-topbar-searchbox"></div>',
+        '<div id="plone-global-topbar-searchbox">',
+          '<gcse:search></gcse:search>',
+        '</div>',
 
         '<div id="plone-global-topbar-mainlinks">',
           '<!-- Planet -->',
