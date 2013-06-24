@@ -264,7 +264,7 @@
   color: #FFFFFF;
 }
 #plone-global-topbar-wrapper #sites-select li a {
-  background: url("img/arrow.png") no-repeat scroll 10px 6px;
+  background: url("../img/arrow.png") no-repeat scroll 10px 6px;
   background-position: 65px 8px;
   color: #999;
   font-family: 'dinregular';
@@ -275,7 +275,7 @@
   text-decoration: none;
 }
 #plone-global-topbar-wrapper #sites-select ul li a:hover {
-  background: url("img/arrow.png") no-repeat scroll 10px 6px;
+  background: url("../img/arrow.png") no-repeat scroll 10px 6px;
   background-position: 65px 8px;
 }
 #plone-global-topbar-wrapper #sites-select ul ul {
@@ -315,6 +315,7 @@
   border-top: none;
   float: none;
   position: relative;
+  display: list-item;
 }
 #plone-global-topbar-wrapper #sites-select ul ul li a {
   color: #FFFFFF;
