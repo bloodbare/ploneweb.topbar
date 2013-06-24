@@ -48,10 +48,12 @@
     });
   }
   jQuery(document).ready(function(){
+    target.hide();
     loadWidgetHTML(function(){
       loadWidgetCSS();
       loadSearchBox();
       loadMobileJS();
+      target.show();
     });
   });
 })();
