@@ -1,17 +1,14 @@
 
+Widget implementation available in the *implementation* folder. Structure is as follows:
 
-<a class="plone-global-links" href="http://plone.org">Plone top bar</a>
-<script>
-!function(d,s,id){
-    var js;
-    var fjs=d.getElementsByTagName(s)[0];
+* *fonts* and *img* folders are copied from the *mockup* folder
+* js/load.js contains script that is to be imported as
 
-    if(!d.getElementById(id)){
-        js=d.createElement(s);
-        js.id=id;
-        js.src="topbar.js";
-        fjs.parentNode.insertBefore(js,fjs);
-    }
-}(document,"script","plone-global-topbar");
+  :: 
 
-</script>
+    <script src="http://my.domain/path/to/load.js"></script>
+
+* js/index.js contains the widget html in jsonp format (required for cross-domain JS requests)
+* css/reset.less css reset for the widget, generates css/reset.css via a `less <http://lesscss.org/>`_ compiler
+* css/topbar.less slightly modfied version of the original topbar.css, generates topbar.css
+* mockup.html represents an example usage of the widget.
