@@ -1,9 +1,9 @@
 (function(){
   var target = jQuery('#topbarcontainer');
-  var baseURL = 'http://static.david.edw.ro/ploneweb.topbar/implementation';
+  var baseURL = '/implementation';
   function loadWidgetHTML(callback) {
     jQuery.ajax({
-      url: baseURL + "/js/index.js",
+      url: baseURL + "/js/topbar_index.js",
       jsonpCallback: "populateWidget",
       jsonp: false,
       dataType: "jsonp",
